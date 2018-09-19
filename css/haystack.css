@@ -255,7 +255,7 @@ section.features .feature-item h3 {
 }
 
 section.features .feature-item i {
-  font-size: 80px;
+  font-size: 60px;
   display: block;
   margin-bottom: 15px;
   background: -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
@@ -448,11 +448,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .floating-label-form-group-with-focus label {
   color: #18BC9C;
 }
-
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid white;
-}
-
 
 #map {
   background-image: url("../img/map2.png");
