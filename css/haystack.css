@@ -233,6 +233,7 @@ section.features .device-container,
 section.features .feature-item {
   max-width: 325px;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 section.features .device-container {
@@ -565,4 +566,12 @@ strong {
 
 .text-light {
   color: #c5c5c5 !important;
+}
+
+.gov-logo {
+  margin: 5px;
+  max-width: 170px;
+  max-height: 170px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }

@@ -42,3 +42,28 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+jQuery(function(){
+  function random(n) {
+      return Math.floor(Math.random() * n);
+  }
+  imageLoop('div#gov-logo-block-1 img');
+  imageLoop('div#gov-logo-block-2 img');
+  imageLoop('div#gov-logo-block-3 img');
+  function imageLoop(selector){
+    var transition_time = 500;
+    var waiting_time = 1000;
+    var images = $(selector);
+    var n = images.length;
+    var current = random(n);
+    images.hide();
+    images.eq(current).show();
+    
+    var interval_id = setInterval(function () {
+        images.eq(current).fadeOut(transition_time, function () {
+            current = random(n);
+            images.eq(current).fadeIn(transition_time);
+        });
+    }, 2 * transition_time + waiting_time);
+  }
+})
