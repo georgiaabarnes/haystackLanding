@@ -562,3 +562,7 @@ strong {
   width: 100%;
   height: auto;
 }
+
+.text-light {
+  color: #c5c5c5 !important;
+}
