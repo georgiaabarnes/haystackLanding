@@ -233,6 +233,7 @@ section.features .device-container,
 section.features .feature-item {
   max-width: 325px;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 section.features .device-container {
@@ -255,7 +256,7 @@ section.features .feature-item h3 {
 }
 
 section.features .feature-item i {
-  font-size: 80px;
+  font-size: 60px;
   display: block;
   margin-bottom: 15px;
   background: -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
@@ -449,11 +450,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   color: #18BC9C;
 }
 
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid white;
-}
-
-
 #map {
   background-image: url("../img/map2.png");
   background-repeat: no-repeat;
@@ -566,4 +562,16 @@ strong {
   max-width: 500px;
   width: 100%;
   height: auto;
+}
+
+.text-light {
+  color: #c5c5c5 !important;
+}
+
+.gov-logo {
+  margin: 5px;
+  max-width: 170px;
+  max-height: 170px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
