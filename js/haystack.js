@@ -51,8 +51,8 @@ jQuery(function(){
   imageLoop('div#gov-logo-block-2 img');
   imageLoop('div#gov-logo-block-3 img');
   function imageLoop(selector){
-    var transition_time = 500;
-    var waiting_time = 1000;
+    var transition_time = 1000;
+    var waiting_time = 2000;
     var images = $(selector);
     var n = images.length;
     var current = random(n);

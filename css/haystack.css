@@ -572,6 +572,6 @@ strong {
   margin: 5px;
   max-width: 170px;
   max-height: 170px;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+/*  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */*/
+/*  filter: grayscale(100%);*/
 }
