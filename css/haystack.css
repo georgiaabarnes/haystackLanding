@@ -50,11 +50,11 @@ p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 section {
-  padding: 100px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 25px 0;
 }
 
 section h2 {
@@ -160,11 +160,19 @@ section h2 {
   #mask-logo {
     color: white;
   }
+  
 }
 
 @media (max-width: 991px) {
   #mask-logo {
     color: #095580;
+  }
+  .video-container {
+    margin-top: 68px;
+  }
+  #byline {
+    text-align: center;
+    margin-top: 68px;
   }
 }
 
@@ -174,15 +182,12 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #095580;
-  background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #095580, #30aad2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
+  background: linear-gradient(to left, #095580, #30aad2);
 }
 
 header.masthead .header-content {
   margin-bottom: 100px;
-  text-align: center;
 }
 
 header.masthead .header-content h1 {
@@ -214,6 +219,47 @@ header.masthead .device-container .screen img {
   }
   header.masthead .device-container {
     max-width: 325px;
+  }
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-container > video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+@media (max-width: 845px){
+  video {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+@media (min-width:846px) and (max-width: 992px) {
+  video {
+    height: auto !important;
+    width: 100% !important;
+  }
+}
+@media (min-width: 992px) and (max-aspect-ratio: 1920/1080) {
+  video {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+@media (min-width: 992px) and (min-aspect-ratio: 1920/1080) {
+  video {
+    height: auto !important;
   }
 }
 
@@ -450,7 +496,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   color: #18BC9C;
 }
 
-#map {
+#experience {
   background-image: url("../img/map2.png");
   background-repeat: no-repeat;
 
@@ -574,4 +620,70 @@ strong {
   max-height: 170px;
 /*  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */*/
 /*  filter: grayscale(100%);*/
+}
+
+.rw-words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	-webkit-animation: rotateWord 15s linear infinite 0s;
+	-ms-animation: rotateWord 15s linear infinite 0s;
+	animation: rotateWord 15s linear infinite 0s;
+}
+
+.rw-words span:nth-child(2) { 
+  -webkit-animation-delay: 3s; 
+-ms-animation-delay: 3s; 
+animation-delay: 3s; 
+}
+.rw-words span:nth-child(3) { 
+  -webkit-animation-delay: 6s; 
+-ms-animation-delay: 6s; 
+animation-delay: 6s; 
+}
+.rw-words span:nth-child(4) { 
+  -webkit-animation-delay: 9s; 
+-ms-animation-delay: 9s; 
+animation-delay: 9s; 
+}
+.rw-words span:nth-child(5) { 
+  -webkit-animation-delay: 12s; 
+-ms-animation-delay: 12s; 
+animation-delay: 12s; 
+}
+
+
+@-webkit-keyframes rotateWord {
+  0% { opacity: 0; }
+  2% { opacity: 0; -webkit-transform: translateY(-30px); }
+5% { opacity: 1; -webkit-transform: translateY(0px);}
+  17% { opacity: 1; -webkit-transform: translateY(0px); }
+20% { opacity: 0; -webkit-transform: translateY(30px); }
+80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes rotateWord {
+  0% { opacity: 0; }
+  2% { opacity: 0; -ms-transform: translateY(-30px); }
+5% { opacity: 1; -ms-transform: translateY(0px);}
+  17% { opacity: 1; -ms-transform: translateY(0px); }
+20% { opacity: 0; -ms-transform: translateY(30px); }
+80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes rotateWord {
+  0% { opacity: 0; }
+  2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+  17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+#byline {
+  background-color: #222222;
+  color: #fff;
 }
