@@ -10,8 +10,35 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Trade-Gothic";
+  src: url('../fonts/Trade-Gothic.ttf')
+}
+
+@font-face {
+  font-family: "Trade-Gothic-Bold";
+  src: url('../fonts/Trade-Gothic-Bold.ttf')
+}
+
+@font-face {
+  font-family: "Trade-Gothic-Light";
+  src: url('../fonts/Trade-Gothic-Light.ttf')
+}
+
+.trade-gothic {
+  font-family: "Trade-Gothic", "Oswald", sans-serif;
+}
+
+.trade-gothic-bold {
+  font-family: "Trade-Gothic-Bold", "Oswald", sans-serif;
+}
+
+.trade-gothic-Light {
+  font-family: "Trade-Gothic-Light", "Oswald", sans-serif;
+}
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Trade-Gothic-Light", 'Lato', sans-serif;
 }
 
 a {
@@ -41,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Trade-Gothic", 'Lato', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -66,14 +93,14 @@ section h2 {
   background-color: white;
   -webkit-transition: all .35s;
   transition: all .35s;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Trade-Gothic",'Oswald', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand {
   color: #fdcc52;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Trade-Gothic-Bold", 'Oswald', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -90,7 +117,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a {
   font-size: 11px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Trade-Gothic", 'Oswald', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -239,15 +266,15 @@ header.masthead .device-container .screen img {
   overflow: hidden;
 }
 
-@media (max-width: 845px){
+@media (max-width: 930px){
   video {
     height: 100% !important;
     width: auto !important;
   }
 }
-@media (min-width:846px) and (max-width: 992px) {
+@media (min-width:930px) and (max-width: 992px) {
   video {
-    height: auto !important;
+    height: auto  !important;
     width: 100% !important;
   }
 }
@@ -309,6 +336,15 @@ section.features .feature-item i {
   background: linear-gradient(to left, #095580, #30aad2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.feature-item svg {
+  height: 60px;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  color:  #095580;
+  fill: url(#MyGradient);
 }
 
 .feature-item > h1 {
@@ -401,13 +437,13 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .btn {
   border-radius: 300px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Trade-Gothic-Light", 'Lato', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .btn-xl {
-  font-size: 11px;
+  font-size: 14px;
   padding: 15px 45px;
 }
 
@@ -626,9 +662,9 @@ strong {
 	position: absolute;
 	opacity: 0;
 	overflow: hidden;
-	-webkit-animation: rotateWord 15s linear infinite 0s;
-	-ms-animation: rotateWord 15s linear infinite 0s;
-	animation: rotateWord 15s linear infinite 0s;
+	-webkit-animation: rotateWord 18s linear infinite 0s;
+	-ms-animation: rotateWord 18s linear infinite 0s;
+	animation: rotateWord 18s linear infinite 0s;
 }
 
 .rw-words span:nth-child(2) { 
@@ -650,6 +686,11 @@ animation-delay: 9s;
   -webkit-animation-delay: 12s; 
 -ms-animation-delay: 12s; 
 animation-delay: 12s; 
+}
+.rw-words span:nth-child(6) { 
+  -webkit-animation-delay: 15s; 
+-ms-animation-delay: 15s; 
+animation-delay: 15s; 
 }
 
 
@@ -686,4 +727,30 @@ animation-delay: 12s;
 #byline {
   background-color: #222222;
   color: #fff;
+}
+
+.circle-text, .circle-icons {
+  width: auto;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.circle-text {
+  opacity: 0;
+}
+
+.about-container{
+  width: auto;
+  height: 80vh;
+  background-image: url("../img/Haystack-icon-circle-main.png");
+  background-repeat: no-repeat;
+  background-size: auto 80vh;
+  background-position: center;
+}
+
+.haystack-logo {
+  font-size: 3rem;
 }
