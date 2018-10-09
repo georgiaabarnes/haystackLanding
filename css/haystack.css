@@ -333,7 +333,6 @@ section.features .feature-item i {
   display: block;
   margin-bottom: 15px;
   background: -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
-  background: linear-gradient(to left, #095580, #30aad2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
