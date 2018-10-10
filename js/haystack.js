@@ -55,7 +55,23 @@
     })
   })
 
+  //contact us btn - show form and hide button
+  $('#contact-btn').click(function() {
+    $('#contact-btn').hide("slow");
+    $('#contact-form').show("slow");
+  })
+
+  $('#close-contact').click(function() {
+    $('#contact-btn').show("slow");
+    $('#contact-form').hide("slow");
+  })
+
 })(jQuery); // End of use strict
+
+//contact us btn delay
+setTimeout(function(){
+  $("#contact-btn").toggle("slow");
+}, 1000);
 
 jQuery(function(){
   function random(n) {
